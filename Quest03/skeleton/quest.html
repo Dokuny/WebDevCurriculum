@@ -33,15 +33,37 @@
 		</section>
 
 		<script>
-			let row1Squares = document.querySelectorAll('.row1 .square');
-			for(let node of row1Squares) {
+			let row1Squares = document.querySelectorAll('.row1 .square');  //배열로 리턴해주는 queryselector
+			for(let node of row1Squares) { // for...of 명령문 : 자바의 향상된 포문같은거
 				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+				node.onclick = function() {
+					if(node.style.backgroundColor == "yellow"){
+						node.style.backgroundColor = "white";
+						return;
+					}
+					node.style.backgroundColor = "yellow";
+					
+				};
+				
+				
 			}
 
 			let row2Squares = document.querySelectorAll('.row2 .square');
 			for(let node of row2Squares) {
 				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+				
+				node.onclick = function(){
+					var newClass = document.createElement("class");
+					var ap = document.querySelectorAll(style .enabled);
+					
+					newClass.setAttributeNode(ap);
+					node.appendChild(newClass);
+				}
+				
+			
 			}
+				
+			
 		</script>
 	</body>
 </html>
