@@ -39,10 +39,9 @@
 				node.onclick = function() {
 					if(node.style.backgroundColor == "yellow"){
 						node.style.backgroundColor = "white";
-						return;
+					}else {
+						node.style.backgroundColor = "yellow";
 					}
-					node.style.backgroundColor = "yellow";
-					
 				};
 				
 				
@@ -52,13 +51,18 @@
 			for(let node of row2Squares) {
 				/* TODO: node 변수를 어떻게 조작해야 할까요? */
 				
-				node.onclick = function(){
-					var newClass = document.createElement("class");
-					var ap = document.querySelectorAll(style .enabled);
-					
-					newClass.setAttributeNode(ap);
-					node.appendChild(newClass);
-				}
+				node.onclick= function (){
+					if(node.classList.contains('enabled')){
+						node.classList.remove('enabled');
+						
+					}else {
+						node.classList.add('enabled');
+					}
+				};
+				
+				
+				
+				
 				
 			
 			}

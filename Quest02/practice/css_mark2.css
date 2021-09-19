@@ -9,12 +9,13 @@ div{
 }
 
 a{
+    color: gray;
     text-decoration: none;
 }
 
 #wrapper {
     display: grid;
-    grid-template-columns: repeat(3,minmax(100px,auto));
+    grid-template-columns: repeat(3,minmax(50px,auto));
     grid-template-rows: repeat(auto-fit,minmax(50px,auto));
     grid-row-gap: 15px;
     grid-template-areas:
@@ -39,13 +40,15 @@ a{
 
 #logo {
     grid-area : logo;
+
+
 }
 
 #search {
     grid-area : search;
 }
 #searchset {
-    width: 600px;
+    width: 100%;
     height: 60px;
     display: block;
     margin: 0 auto;
