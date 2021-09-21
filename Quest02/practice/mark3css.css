@@ -1,0 +1,535 @@
+:root {
+    /*color*/
+    --green-color: rgba(1, 199, 91, 0.95);
+    --black-color: #140a00;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    --sun-color: rgba(255, 189, 17, 0.95);
+
+    /*   padding */
+    --small-padding: 10px;
+    --middle-padding: 15px;
+    --large-padding: 20px;
+
+    /*    size*/
+    --button-size: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Serif KR" ;
+}
+button :hover{
+    cursor: pointer;
+}
+
+
+body {
+    box-sizing: border-box;
+    padding: var(--small-padding);
+    background: linear-gradient(to bottom, white, white 15%, #dde3e9);
+}
+
+body > section {
+    width: 50%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+}
+
+header .icons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header .sidemenu button {
+    border-style: none;
+    background-color: white;
+    font-size: 25px;
+}
+
+header .icons button {
+    border-radius: 15px;
+    font-size: var(--button-size)/2;
+    padding: 4px;
+    background-color: rgba(244, 246, 248, 0.95);
+    border: 1px solid rgba(234, 235, 236, 0.95);
+
+}
+
+header ul li {
+    margin: auto 0;
+    margin-left: 10px;
+
+}
+
+header .icons .qrBtn {
+    font-weight: 900;
+    border-style: none;
+    background-color: white;
+}
+
+header .icons:nth-child(2) .fas {
+    color: rgba(70, 68, 70, 0.95);
+}
+
+/* Main */
+.main {
+    margin-top: 6em;
+    margin-bottom: 10%;
+}
+
+.main > * {
+    margin-bottom: 15px;
+}
+
+.main .logo {
+    text-align: center;
+    font-family: "Tmon몬소리 Black";
+    color: var(--green-color);
+    font-weight: 900;
+    font-size: 4em;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+}
+
+.main .search {
+    width: 100%;
+    display: flex;
+    outline: 1.5px solid var(--green-color);
+    padding: 10px 0;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+.main .search input {
+    flex: 1 1 88%;
+    border: none;
+    height: 35px;
+    margin-left: 10px;
+}
+
+.main .search input:focus {
+    outline: none;
+}
+
+.main .search ul {
+    flex: 1 1 12%;
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.main .search ul li {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.main .search ul li .fas {
+    font-size: 28px;
+    color: var(--green-color);
+}
+
+.main .boardwrapper {
+    display: flex;
+    flex-flow: column;
+}
+
+.main .board {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main .board li {
+    display: flex;
+    flex-flow: column;
+    width: 13%;
+    text-align: center;
+    font-size: 12px;
+    margin: 0 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .board li div {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(244, 248, 251, 0.95);
+    border: 1px solid #cfd3d6;
+    border-radius: 15px;
+    line-height: 48px;
+    margin-bottom: 4px;
+}
+
+.main .board li i {
+    font-size: var(--button-size);
+}
+
+.main .boardwrapper .board:nth-of-type(2) i {
+    color: var(--green-color);
+}
+
+/* weather*/
+body #weather > div {
+    background-color: white;
+}
+
+
+#weather .miniWeather {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 20px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    align-items: center;
+}
+#weather .miniWeather .nowWeather {
+    display: flex;
+    align-items: center;
+    flex: 1 1 70%;
+}
+.nowWeather .notice {
+    display: flex;
+    flex-flow: column;
+    margin-left: 10px;
+}
+.nowWeather .fas{
+    font-size: 30px;
+    color: #7bb5fa;
+}
+.nowWeather .notice .s1 {
+    font-weight: 900;
+    font-size: 20px;
+}
+.nowWeather .notice .s2 {
+    font-size: 14px;
+    color: var(--grey-dark-color);
+}
+.miniWeather .now {
+    padding-left: 10px;
+    border-left: 1px solid var(--grey-light-color);
+    flex: 1 1 30%;
+}
+.miniWeather .now .notice{
+    display: flex;
+    flex-flow: column;
+}
+.miniWeather .now .s1 {
+    color: var(--red-color);
+    font-weight: 900;
+    font-size: 18px;
+}
+.miniWeather .now .s2 {
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.bigWeather {
+    margin-top: 12px;
+    border-radius: 20px;
+    padding: 10px
+}
+.bigWeather .topLogo {
+    display: flex;
+    justify-content: space-between;
+}
+.bigWeather .topLogo .logo .s1 {
+    font-weight: 900;
+    font-size: 20px;
+}
+.bigWeather .topLogo .logo .s2 {
+    color: var(--grey-dark-color);
+}
+.bigWeather .topLogo .logo .s2 i{
+    margin-left: 5px;
+    color: #509adf;
+}
+
+.bigWeather .topLogo .openBtn {
+    border: none;
+    background-color: white;
+    color: var(--grey-dark-color);
+}
+
+.bigWeather .dateBtn {
+    margin-top: 15px;
+    display: flex;
+}
+.bigWeather .dateBtn li {
+    background-color: #f4f7fc;
+    margin-right: 10px;
+    padding: 10px;
+    color: #70737a;
+    font-size: 13px;
+}
+.bigWeather .dateBtn li:hover {
+    background-color: #7594cd;
+    color: white;
+}
+.bigWeather .weather {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.bigWeather .weather li {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.bigWeather .weather li .stick {
+    outline: 1px solid var(--grey-light-color);
+    height: 20px;
+    margin: 5px 0;
+}
+.bigWeather .weather i {
+    margin-top: 10px;
+    color: var(--sun-color);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.bigWeather .weather .fa-cloud-rain {
+    color: #e3e5e8;
+}
+
+.bigWeather .weather .today {
+    background-color: #787b83;
+    padding: 1px 2px;
+    border-radius: 8px;
+    color: white;
+}
+
+#weather > .corona {
+    padding: 10px;
+    margin-top: 12px;
+    display: flex;
+}
+.corona .corona19 {
+    flex: 1 1 50%;
+}
+.corona .coronaFact {
+    flex: 1 1 50%;
+    padding-left: 10px;
+    border-left: 1px solid var(--grey-light-color);
+}
+.corona19 {
+    font-size: 20px;
+    font-weight: bold;
+}
+.corona19 i{
+    color: rgba(28,138,38,0.91);
+}
+.corona19 > span {
+    margin-top: 3px;
+    font-weight: bold;
+    font-size: 13px;
+    color: rgba(116,118,125,0.91);
+}
+
+.corona .coronaFact {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.corona .coronaFact i {
+    color: moccasin;
+}
+.coronaFact > span {
+    font-size: 13px;
+    color: rgba(116,118,125,0.91);
+}
+
+/* etc */
+.etc > div {
+    padding: 12px;
+    margin-top: 12px;
+    background-color: white;
+}
+.memorialDay i {
+    color: rgba(217,138,125,0.91);
+    margin-right: 10px;
+}
+.memorialDay p span{
+    font-weight: bold;
+}
+.memorialDay p {
+    text-align: center;
+    margin: 10px 0;
+}
+.useApp{
+    display: flex;
+    justify-content: space-between;
+}
+.useApp .phrases{
+    display: flex;
+    align-items: center;
+}
+.useApp .phrases >div {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(7,182,102,0.91);
+    text-align: center;
+    line-height: 40px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    margin-right: 12px;
+}
+.phrases p {
+    font-size: 15px;
+    color: var(--grey-dark-color);
+}
+.phrases p span{
+    color: black;
+    font-weight: bold;
+}
+.useApp button {
+    padding: 5px;
+    color: rgba(135,186,233,0.91);
+    border: 3px solid rgba(150,194,236,0.91);
+    border-radius: 3px;
+    font-weight: bold;
+    background-color:white ;
+}
+.etc .webtoon {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 12px;
+}
+.etc .webtoon span{
+    font-weight: bold;
+    font-size: 18px;
+}
+.etc .webtoon .shevron {
+    background-color: white;
+    border: none;
+    font-size: 18px;
+    color: var(--grey-dark-color);
+}
+
+.popularSubject {
+    display: flex;
+    flex-flow: column;
+}
+
+.popularSubject .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.popularSubject .title span {
+    font-weight: bold;
+    font-size: 18px;
+}
+.popularSubject .title button {
+    background-color: white;
+    border: none;
+    color: var(--grey-dark-color);
+}
+.popularSubject .title button:hover{
+    cursor: pointer;
+}
+.popularSubject .subjectList {
+    display: flex;
+    flex-flow:row wrap;
+}
+.popularSubject .subjectList li{
+    padding : 12px;
+    flex: 1 1 40%;
+    background-color: rgba(245,247,249,0.91);
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.subjectList {
+    font-size: 18px;
+    color: var(--black-color);
+
+}
+.subjectList .fas {
+    width: 25px;
+    margin-right: 12px;
+    font-size: 25px;
+}
+.subjectList .fa-tape {
+    color: var(--red-color);
+}
+
+.subjectList .fa-book {
+    color: rgba(84,74,68,0.91);
+}
+
+.subjectList .fa-plane {
+    color: #509adf;
+}
+
+.etc .notice {
+     display: flex;
+    justify-content: space-between;
+}
+
+.shevron {
+    background-color: white;
+    border: none;
+    color: var(--grey-dark-color);
+}
+
+.etc .notice div .s1{
+    border: 2px solid var(--green-color);
+    color: var(--green-color);
+    border-radius: 15px;
+    padding : 0 8px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+.etc .notice div .s2 {
+    font-weight: bold;
+}
+.etc .notice div {
+    padding: 12px 0;
+}
+
+/*footer*/
+
+footer {
+    display: flex;
+    width: 50%;
+    margin: 50px auto 0;
+    font-size: 13px;
+    text-align: center;
+    flex-flow: column;
+}
+footer ul {
+    display: flex;
+    justify-content: center;
+    color: #909090;
+    margin-bottom: 5px;
+}
+footer ul li{
+    padding: 0 15px;
+}
+footer .middleLine {
+    border-right: 1px solid #909090;
+    border-left: 1px solid #909090;
+}
+
+footer span {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #909090;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>NAVER</title>
+		<link rel="stylesheet" href="mark3css.css">
+		<script src="https://kit.fontawesome.com/c96c5e0f4b.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+		
+	</head>
+	<body>
+		<!--Header-->
+		<header>
+			<div class="sidemenu">
+				<button class="sideBtn"><i class="fas fa-bars"></i></button>
+			</div>
+			<ul class="icons">
+				<li>
+					<button class="qrBtn"><span>QR 체크인</span></button>
+				</li>
+				<li>
+					<button><i class="fas fa-square-full"></i><span>Pay</span></button>
+				</li>
+				<li>
+					<button><i class="fas fa-inbox"></i></button>
+				</li>
+			</ul>
+		</header>
+		
+		<!--Main-->
+		<section class="main">
+			<h1 class="logo">NAVER</h1>
+			
+			<div class="search">
+				<input type="search" placeholder="검색어를 입력해주세요.">
+				<ul>
+					<li><i class="fas fa-microphone"></i></li>
+					<li><i class="fas fa-camera"></i></li>
+					<li><i class="fas fa-map-marker-alt"></i></li>
+				</ul>
+			</div>
+			<div class="boardwrapper">
+				<ul class="board">
+					<li>
+						<div class="iconsWrapper"><i class="far fa-newspaper"></i></div>
+						<span>뉴스판</span></li>
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-chart-line"></i></div>
+						<span>경제지표판</span></li>
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-star"></i></div>
+						<span>연예판</span></li>
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-heart"></i></div>
+						<span>트렌드판</span></li>
+				</ul>
+				<ul class="board">
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-envelope-open-text"></i></div>
+						<span>메일</span></li>
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-mug-hot"></i></div>
+						<span>카페</span></li>
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-comment-alt"></i></div>
+						<span>블로그</span></li>
+					<li>
+						<div class="iconsWrapper"><i class="fas fa-ellipsis-h"></i></div>
+						<span></span></li>
+				</ul>
+			</div>
+		</section>
+		
+		<!--Weather-->
+		<section id="weather">
+			<div class="miniWeather">
+				<div class="nowWeather">
+					<i class="fas fa-moon"></i>
+					<div class="notice">
+						<span class="s1">10º 맑음</span>
+						<span class="s2">어제보다 2º 높아요</span>
+					</div>
+				</div>
+				<div class="now">
+					<div class="notice">
+						<span class="s1">NOW.</span>
+						<span class="s2">지금 방송중</span>
+					</div>
+					<div class="icons">
+					</div>
+				</div>
+			</div>
+			<div class="bigWeather">
+				<div class="topLogo">
+					<div class="logo">
+						<span class="s1">날씨</span>
+						<span class="s2">서울시 잠실동<i class="far fa-compass"></i></span>
+					</div>
+					
+					<button class="openBtn"><i class="fas fa-chevron-up"></i></button>
+				</div>
+				
+				<ul class="dateBtn">
+					<li>시간대별 날씨</li>
+					<li>시간대별 미세먼지</li>
+					<li>주간 날씨</li>
+					<li>주간 미세먼지</li>
+				</ul>
+				
+				<!--여기 안에 stick 길이는 px로 나중에 스크립트로 자동 계산 해서 height 잡아주게 설정하셈-->
+				<ul class="weather">
+					<li>
+						<span>19º</span>
+						<span class="stick"></span>
+						<span>8º</span>
+						<i class="fas fa-sun"></i>
+						<span>어제</span>
+					</li>
+					<li>
+						<span>22º</span>
+						<span class="stick"></span>
+						<span>7º</span>
+						<i class="fas fa-sun"></i>
+						<span class="today">오늘</span>
+					</li>
+					<li>
+						<span>17º</span>
+						<span class="stick"></span>
+						<span>11º</span>
+						<i class="fas fa-cloud-rain"></i>
+						<span>월</span>
+					</li>
+					<li>
+						<span>18º</span>
+						<span class="stick"></span>
+						<span>12º</span>
+						<i class="fas fa-cloud-rain"></i>
+						<span>화</span>
+					</li>
+					<li>
+						<span>17º</span>
+						<span class="stick"></span>
+						<span>4º</span>
+						<i class="fas fa-sun"></i>
+						<span>수</span>
+					</li>
+					<li>
+						<span>19º</span>
+						<span class="stick"></span>
+						<span>4º</span>
+						<i class="fas fa-sun"></i>
+						<span>목</span>
+					</li>
+					<li>
+						<span>19º</span>
+						<span class="stick"></span>
+						<span>6º</span>
+						<i class="fas fa-sun"></i>
+						<span>금</span>
+					</li>
+					<li>
+						<span>19º</span>
+						<span class="stick"></span>
+						<span>8º</span>
+						<i class="fas fa-sun"></i>
+						<span>토</span>
+					</li>
+					<li>
+						<span>18º</span>
+						<span class="stick"></span>
+						<span>6º</span>
+						<i class="fas fa-sun"></i>
+						<span>일</span>
+					</li>
+				</ul>
+			</div>
+			<div class="corona">
+				<div class="corona19">
+					<div>
+						<i class="fas fa-virus-slash"></i>
+						<span>코로나 19</span>
+					</div>
+					<span>국내외 확진 현황</span>
+				</div>
+				<div class="coronaFact">
+					<div>
+						<i class="fas fa-balance-scale"></i>
+						<span>코로나19 팩트체크</span>
+					</div>
+					<span>백신 정보 팩트는?</span>
+				</div>
+			</div>
+		</section>
+		
+		<!--etc..-->
+		<section class="etc">
+			<div class="memorialDay">
+				<p><i class="fas fa-landmark"></i>제102주년<span> 대한민국 임시정부 수립일</span></p>
+			
+			</div>
+			<div class="useApp">
+				<div class="phrases">
+					<div>N</div>
+					<p>앱으로 <span>새로운 네이버</span>를 더 쾌적하게 사용해 보세요</p>
+				</div>
+				<button>앱 사용하기</button>
+			</div>
+			<div class="webtoon"><span>웹툰</span>
+				<button class="shevron"><i class="fas fa-angle-down"></i></button>
+			</div>
+			</div>
+			<div class="popularSubject">
+				<div class="title">
+					<span>인기 주제 판을 확인해 보세요!</span>
+					<button class="shevron">판관리</button>
+				</div>
+				
+				<ul class="subjectList">
+					<li><i class="fas fa-tape"></i><span>영화판</span></li>
+					<li><i class="fas fa-book"></i><span>소설판</span></li>
+					<li><i class="fas fa-utensils"></i><span>요리판</span></li>
+					<li><i class="fas fa-plane"></i><span>여행판</span></li>
+				</ul>
+			
+			</div>
+			<div class="notice">
+				<div>
+					<span class="s1">알립니다</span>
+					<span class="s2">네이버앱 업데이트 사전 안내</span>
+				</div>
+				<button class="shevron"><i class="fas fa-chevron-right"></i></button>
+			</div>
+		</section>
+		
+		<!--footer-->
+		<footer>
+			<ul>
+				<li>로그인</li>
+				<li class="middleLine">전체서비스</li>
+				<li>pc버전</li>
+			</ul>
+			<ul>
+				<li>이용약관</li>
+				<li class="middleLine">개인정보처리방침</li>
+				<li>고객센터</li>
+			</ul>
+			<span>NAVER</span>
+		</footer>
+	</body>
+</html>
