@@ -19,9 +19,10 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Noto Serif KR" ;
+    font-family: "Noto Serif KR";
 }
-button :hover{
+
+button :hover {
     cursor: pointer;
 }
 
@@ -109,7 +110,7 @@ header .icons:nth-child(2) .fas {
 .main .search {
     width: 100%;
     display: flex;
-    outline: 1.5px solid var(--green-color);
+    outline: 1px solid var(--green-color);
     padding: 10px 0;
     align-items: center;
     margin-bottom: 5px;
@@ -198,42 +199,51 @@ body #weather > div {
     border-top-right-radius: 20px;
     align-items: center;
 }
+
 #weather .miniWeather .nowWeather {
     display: flex;
     align-items: center;
     flex: 1 1 70%;
 }
+
 .nowWeather .notice {
     display: flex;
     flex-flow: column;
     margin-left: 10px;
 }
-.nowWeather .fas{
+
+.nowWeather .fas {
     font-size: 30px;
     color: #7bb5fa;
 }
+
 .nowWeather .notice .s1 {
     font-weight: 900;
     font-size: 20px;
 }
+
 .nowWeather .notice .s2 {
     font-size: 14px;
     color: var(--grey-dark-color);
 }
+
 .miniWeather .now {
     padding-left: 10px;
     border-left: 1px solid var(--grey-light-color);
     flex: 1 1 30%;
 }
-.miniWeather .now .notice{
+
+.miniWeather .now .notice {
     display: flex;
     flex-flow: column;
 }
+
 .miniWeather .now .s1 {
     color: var(--red-color);
     font-weight: 900;
     font-size: 18px;
 }
+
 .miniWeather .now .s2 {
     font-weight: 900;
     font-size: 12px;
@@ -244,18 +254,22 @@ body #weather > div {
     border-radius: 20px;
     padding: 10px
 }
+
 .bigWeather .topLogo {
     display: flex;
     justify-content: space-between;
 }
+
 .bigWeather .topLogo .logo .s1 {
     font-weight: 900;
     font-size: 20px;
 }
+
 .bigWeather .topLogo .logo .s2 {
     color: var(--grey-dark-color);
 }
-.bigWeather .topLogo .logo .s2 i{
+
+.bigWeather .topLogo .logo .s2 i {
     margin-left: 5px;
     color: #509adf;
 }
@@ -270,6 +284,7 @@ body #weather > div {
     margin-top: 15px;
     display: flex;
 }
+
 .bigWeather .dateBtn li {
     background-color: #f4f7fc;
     margin-right: 10px;
@@ -277,15 +292,18 @@ body #weather > div {
     color: #70737a;
     font-size: 13px;
 }
+
 .bigWeather .dateBtn li:hover {
     background-color: #7594cd;
     color: white;
 }
+
 .bigWeather .weather {
     display: flex;
     justify-content: space-around;
     padding: 10px;
 }
+
 .bigWeather .weather li {
     display: flex;
     flex-flow: column;
@@ -297,12 +315,14 @@ body #weather > div {
     height: 20px;
     margin: 5px 0;
 }
+
 .bigWeather .weather i {
     margin-top: 10px;
     color: var(--sun-color);
     font-size: 25px;
     margin-bottom: 10px;
 }
+
 .bigWeather .weather .fa-cloud-rain {
     color: #e3e5e8;
 }
@@ -319,26 +339,31 @@ body #weather > div {
     margin-top: 12px;
     display: flex;
 }
+
 .corona .corona19 {
     flex: 1 1 50%;
 }
+
 .corona .coronaFact {
     flex: 1 1 50%;
     padding-left: 10px;
     border-left: 1px solid var(--grey-light-color);
 }
+
 .corona19 {
     font-size: 20px;
     font-weight: bold;
 }
-.corona19 i{
-    color: rgba(28,138,38,0.91);
+
+.corona19 i {
+    color: rgba(28, 138, 38, 0.91);
 }
+
 .corona19 > span {
     margin-top: 3px;
     font-weight: bold;
     font-size: 13px;
-    color: rgba(116,118,125,0.91);
+    color: rgba(116, 118, 125, 0.91);
 }
 
 .corona .coronaFact {
@@ -349,9 +374,10 @@ body #weather > div {
 .corona .coronaFact i {
     color: moccasin;
 }
+
 .coronaFact > span {
     font-size: 13px;
-    color: rgba(116,118,125,0.91);
+    color: rgba(116, 118, 125, 0.91);
 }
 
 /* etc */
@@ -360,30 +386,36 @@ body #weather > div {
     margin-top: 12px;
     background-color: white;
 }
+
 .memorialDay i {
-    color: rgba(217,138,125,0.91);
+    color: rgba(217, 138, 125, 0.91);
     margin-right: 10px;
 }
-.memorialDay p span{
+
+.memorialDay p span {
     font-weight: bold;
 }
+
 .memorialDay p {
     text-align: center;
     margin: 10px 0;
 }
-.useApp{
+
+.useApp {
     display: flex;
     justify-content: space-between;
 }
-.useApp .phrases{
+
+.useApp .phrases {
     display: flex;
     align-items: center;
 }
-.useApp .phrases >div {
+
+.useApp .phrases > div {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    background-color: rgba(7,182,102,0.91);
+    background-color: rgba(7, 182, 102, 0.91);
     text-align: center;
     line-height: 40px;
     font-size: 30px;
@@ -391,31 +423,37 @@ body #weather > div {
     color: white;
     margin-right: 12px;
 }
+
 .phrases p {
     font-size: 15px;
     color: var(--grey-dark-color);
 }
-.phrases p span{
+
+.phrases p span {
     color: black;
     font-weight: bold;
 }
+
 .useApp button {
     padding: 5px;
-    color: rgba(135,186,233,0.91);
-    border: 3px solid rgba(150,194,236,0.91);
+    color: rgba(135, 186, 233, 0.91);
+    border: 3px solid rgba(150, 194, 236, 0.91);
     border-radius: 3px;
     font-weight: bold;
-    background-color:white ;
+    background-color: white;
 }
+
 .etc .webtoon {
     display: flex;
     justify-content: space-between;
     padding: 20px 12px;
 }
-.etc .webtoon span{
+
+.etc .webtoon span {
     font-weight: bold;
     font-size: 18px;
 }
+
 .etc .webtoon .shevron {
     background-color: white;
     border: none;
@@ -433,45 +471,53 @@ body #weather > div {
     justify-content: space-between;
     margin-bottom: 12px;
 }
+
 .popularSubject .title span {
     font-weight: bold;
     font-size: 18px;
 }
+
 .popularSubject .title button {
     background-color: white;
     border: none;
     color: var(--grey-dark-color);
 }
-.popularSubject .title button:hover{
+
+.popularSubject .title button:hover {
     cursor: pointer;
 }
+
 .popularSubject .subjectList {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
 }
-.popularSubject .subjectList li{
-    padding : 12px;
+
+.popularSubject .subjectList li {
+    padding: 12px;
     flex: 1 1 40%;
-    background-color: rgba(245,247,249,0.91);
+    background-color: rgba(245, 247, 249, 0.91);
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
 .subjectList {
     font-size: 18px;
     color: var(--black-color);
 
 }
+
 .subjectList .fas {
     width: 25px;
     margin-right: 12px;
     font-size: 25px;
 }
+
 .subjectList .fa-tape {
     color: var(--red-color);
 }
 
 .subjectList .fa-book {
-    color: rgba(84,74,68,0.91);
+    color: rgba(84, 74, 68, 0.91);
 }
 
 .subjectList .fa-plane {
@@ -479,7 +525,7 @@ body #weather > div {
 }
 
 .etc .notice {
-     display: flex;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -489,17 +535,19 @@ body #weather > div {
     color: var(--grey-dark-color);
 }
 
-.etc .notice div .s1{
+.etc .notice div .s1 {
     border: 2px solid var(--green-color);
     color: var(--green-color);
     border-radius: 15px;
-    padding : 0 8px;
+    padding: 0 8px;
     font-weight: bold;
     margin-right: 12px;
 }
+
 .etc .notice div .s2 {
     font-weight: bold;
 }
+
 .etc .notice div {
     padding: 12px 0;
 }
@@ -514,15 +562,18 @@ footer {
     text-align: center;
     flex-flow: column;
 }
+
 footer ul {
     display: flex;
     justify-content: center;
     color: #909090;
     margin-bottom: 5px;
 }
-footer ul li{
+
+footer ul li {
     padding: 0 15px;
 }
+
 footer .middleLine {
     border-right: 1px solid #909090;
     border-left: 1px solid #909090;
