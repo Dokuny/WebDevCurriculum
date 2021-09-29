@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+	</head>
+	<script>
+		(function drawStar() {
+			const totalRow = prompt('별을 찍을 줄 수를 입력해주세용');
+			let sum = '';
+		for(let curRow=1;curRow<=totalRow;curRow++){
+			for(let empty=totalRow-curRow;empty>=1;empty--){
+				sum+=' ';
+			}
+			for(let star=1;star<=2*curRow-1;star++){
+				sum+='*';
+			}
+			sum+='\n';
+		}
+		
+		console.log(sum);
+		})
+		();
+	</script>
+	<body>
+	
+	</body>
+</html>
