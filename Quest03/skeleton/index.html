@@ -5,7 +5,7 @@
 		<title>Title</title>
 	</head>
 	<script>
-		(function drawStar() {
+		(function () {
 			const totalRow = prompt('별을 찍을 줄 수를 입력해주세용');
 			let sum = '';
 		for(let curRow=1;curRow<=totalRow;curRow++){
@@ -19,8 +19,9 @@
 		}
 		
 		console.log(sum);
-		})
-		();
+		}());
+		
+	
 	</script>
 	<body>
 	
