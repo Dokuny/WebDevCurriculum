@@ -78,6 +78,7 @@
 * DOM 요소를 class 값으로 찾아내는 함수 - getElementsByClassName()
 * DOM 요소를 태그 이름으로 찾아내는 함수 - getElementsByTagName()
 * DOM요소를 다양한 방법으로 찾아주는 함수 - querySelector(), querySelectorAll()
+* 위의 방법으로 요소를 불러와서 classlist.add나 remove로 처리해준다.
 ### IE9나 그 이전의 옛날 브라우저들에서는 어떻게 해야 하나요?
 ***
 ## 자바스크립트의 변수가 유효한 범위는 어떻게 결정되나요?
