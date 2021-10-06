@@ -1,0 +1,93 @@
+/* TODO: 자유롭게 바탕화면 시스템의 CSS를 만들어 보세요! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section[class *= desktop] {
+    width: 1000px;
+    height: 600px;
+    border: 1px solid black;
+
+}
+section[class *= desktop]  > *:not(.window){
+    display: inline-block;
+}
+
+section[class *= desktop] > .folder, section[class *= desktop] > .icon {
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+section[class *= desktop] > div > img {
+    width: 50px;
+}
+
+section[class *= desktop] > *:not(.window,.user_context):hover{
+    background-color: rgba(137, 120, 188,0.3);
+
+}
+
+.folder i{
+    color: rgb(255,232,159);
+
+}
+.window {
+    border: 1px solid black;
+    width: 30%;
+    height: 30%;
+    z-index: 1;
+    position : absolute;
+    background-color: white;
+    left : 15px;
+    top : 15px;
+    display: none;
+}
+
+.window > .menu{
+    display: flex;
+    justify-content: right;
+    height: 21px;
+    border-bottom: 1px solid black;
+
+}
+
+.window > .menu > button{
+    width: 20px;
+    height: 20px;
+}
+.innerBox {
+    width: 100%;
+    height: 100%;
+}
+
+
+.user_context {
+    width: 80px;
+    height: 75px;
+    border: 1px solid black;
+    font-size: 15px;
+    list-style: none;
+    position: absolute;
+    padding: 3px 5px;
+    background-color: white;
+    z-index: 10;
+}
+.user_context li{
+    margin-top: 2px;
+}
+.user_context li:hover{
+    background-color: rgba(204,204,204,0.87);
+    cursor: pointer;
+}
+
+.desktop_1{
+    background-image: url("background.png");
+    background-size: 100%;
+}
+
