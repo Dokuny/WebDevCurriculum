@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<script src="https://kit.fontawesome.com/c96c5e0f4b.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<!-- 컴퓨터 1 -->
+		<section id="desktop_1">
+		
+		</section>
+		
+		
+		<!-- 마우스 오른쪽 메뉴 -->
+		<ul id="custom_contextMenu">
+			<li id="createIconMenu">아이콘생성</li>
+			<li id="createFolderMenu">폴더생성</li>
+			<li id="deleteElementMenu">삭제</li>
+		</ul>
+		
+		<script src="script.js"></script>
+		<script>
+			const desktop1 = document.getElementById('desktop_1');
+			const myWallpaper = new Wallpaper(desktop1);
+			
+			function init(obj) {
+				eventHandler(obj);
+			}
+			
+			
+			init(myWallpaper);
+			
+			dragFile();
+		</script>
+	</body>
+</html>
