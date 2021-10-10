@@ -2,13 +2,34 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="/style.css">
-		<script src="/notepad.js"></script>
+		<link rel="stylesheet" href="style.css">
+		
 	</head>
 	<body>
 		<!-- TODO: 이 곳을 채워 클라이언트를 만들어 보세요 -->
+		<section id="editor">
+			<div id="leftBox">
+				<div id="listMenu">
+					<button id="newBtn">New</button>
+				</div>
+				
+				<ul id="list">
+				</ul>
+			</div>
+			
+			<div id="rightBox">
+				<ul id="tab">
+				</ul>
+				<div id="form">
+					<textarea id="textBox"></textarea>
+					<button id="saveBtn">저장</button>
+				</div>
+			</div>
+		</section>
+		<script src="notepad.js"></script>
 		<script>
-			let notepad = new Notepad();
+		
+		
 		</script>
 	</body>
 </html>
