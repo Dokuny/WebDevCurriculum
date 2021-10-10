@@ -4,7 +4,7 @@ class Common {
     }
 
     delete(){
-        this.file =null;
+        this.file.remove();
     }
 
     create(){
@@ -71,7 +71,7 @@ class Window extends Common{
     }
 
     delete(){
-        this.storage = null;
+        this.storage.remove();
         super.delete();
     }
 
@@ -80,11 +80,15 @@ class Window extends Common{
         file.setAttribute('class','window');
 
         const menu = document.createElement('ul');
-        const closeBtn = document.createElement('li');
+        const list = document.createElement('li');
+        const closeBtn = document.createElement('button');
+        closeBtn.innerText = 'X';
         menu.setAttribute('class','windowMenu')
         closeBtn.setAttribute('class','closeBtn');
+        list.appendChild(closeBtn);
+        menu.appendChild(list);
 
-        menu.appendChild(closeBtn);
+
 
 
         const storage = document.createElement('div');
@@ -97,17 +101,16 @@ class Window extends Common{
     }
 }
 
-class desktop extends Common{
-    constructor() {
-        super();
+class Desktop {
+    constructor(name) {
+        this.file = this.create(name);
     }
 
-    create(){
+    create(name){
         const file = document.createElement('section');
-        file.setAttribute('class',`desktop${desktopCount++}`);
+        file.id= `desktop-${name}`;
+        file.setAttribute('class','desktop');
 
         return file;
     }
 }
-
-let desktopCount = 1;
