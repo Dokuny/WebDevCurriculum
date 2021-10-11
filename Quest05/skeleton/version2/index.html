@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	<body>
+		<!-- TODO: 이 곳을 채워 클라이언트를 만들어 보세요 -->
+		<section id="editor">
+			<div id="leftBox">
+				<ul id="listMenu">
+					<li><button id="newBtn">New</button></li>
+					<li><button id="deleteBtn">Delete</button></li>
+					<li><button id="renameBtn">Rename</button></li>
+					<li><button id="resetBtn">Reset</button></li>
+				</ul>
+				
+				<ul id="list">
+				</ul>
+			</div>
+			
+			<div id="rightBox">
+				<ul id="tab">
+				</ul>
+				<div id="form">
+					<textarea id="textBox"></textarea>
+					<button id="saveBtn">저장</button>
+				</div>
+			</div>
+		</section>
+		<script src="notepad.js"></script>
+		<script>
+			
+			Control.newBtn.addEventListener('click',Control.createNewFIle);
+			Control.deleteBtn.addEventListener('click',Control.deleteFile);
+			Control.list.addEventListener('dblclick',Control.selectTarget);
+			Control.tab.addEventListener('click',Control.selectTarget)
+			
+			Control.initNote();
+		
+		</script>
+	</body>
+</html>

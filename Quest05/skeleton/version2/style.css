@@ -1,0 +1,89 @@
+* {
+	/* TODO: 필요한 CSS를 채워넣어 보세요! */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+button:not(#tab button){
+    height: 28px;
+    width: 70px;
+    background-color: #F9E4C8;
+    border-style: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+#editor{
+    width: 900px;
+    height: 600px;
+    display: flex;
+    background-color: #FAEEE0;
+}
+
+#leftBox {
+    width: 300px;
+    border: 1px solid black;
+}
+#leftBox > #listMenu{
+    height: 30px;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+#leftBox > #list {
+    padding: 5px 0;
+    display: flex;
+    flex-direction: column;
+}
+#leftBox > #list >li:hover{
+    background-color: #f9e4c8;
+}
+
+#rightBox{
+    width: 600px;
+    border: 1px solid black;
+}
+
+#rightBox>#tab{
+    height: 30px;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+
+#rightBox>#tab>li{
+    background-color: #F9E4C8;
+    border-radius: 5px;
+    margin: 0 3px;
+    border : 1px solid black;
+    cursor: default;
+}
+
+#rightBox>#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+
+}
+#rightBox > #form > #textBox {
+    width: 100%;
+    height: 538px;
+}
+
+.noteTab {
+    display: none;
+}
+
+
+/* 색상 클래스 */
+
+#saveBtn:hover{
+    cursor: pointer;
+}
+#saveBtn:active{
+    background-color: #f9cf93;
+}
+
