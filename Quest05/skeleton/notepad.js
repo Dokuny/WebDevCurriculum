@@ -24,6 +24,7 @@ class Notepad {
         document.querySelector('#tab').appendChild(tabNode);
         return tabNode;
     }
+
     deleteNotepad(){
 
     }

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 	<head>
 		<meta charset="UTF-8">
+		<title>노트패드</title>
 		<link rel="stylesheet" href="style.css">
 		
 	</head>
@@ -34,8 +35,16 @@
 			
 			Control.newBtn.addEventListener('click',Control.createNewFIle);
 			Control.deleteBtn.addEventListener('click',Control.deleteFile);
+			Control.list.addEventListener('dblclick',Control.checkChanges);
 			Control.list.addEventListener('dblclick',Control.selectTarget);
-			Control.tab.addEventListener('click',Control.selectTarget)
+			Control.tab.addEventListener('click',Control.checkChanges);
+			Control.tab.addEventListener('click',Control.selectTarget);
+			Control.list.addEventListener('dblclick',Control.openFile);
+			Control.tab.addEventListener('click',Control.openFile);
+			Control.saveBtn.addEventListener('click',Control.saveText);
+			Control.tab.addEventListener('click',Control.closeTab);
+			Control.renameBtn.addEventListener('click',Control.renameFile);
+			Control.resetBtn.addEventListener('click',Control.resetAll);
 			
 			Control.initNote();
 		
