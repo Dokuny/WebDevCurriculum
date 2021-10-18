@@ -4,17 +4,28 @@
 		<meta charset="UTF-8">
 		<title>노트패드</title>
 		<link rel="stylesheet" href="style.css">
-		
+	
 	</head>
 	<body>
 		<!-- TODO: 이 곳을 채워 클라이언트를 만들어 보세요 -->
 		<section id="editor">
 			<div id="leftBox">
 				<ul id="listMenu">
-					<li><button id="newBtn">New</button></li>
-					<li><button id="deleteBtn">Delete</button></li>
-					<li><button id="renameBtn">Rename</button></li>
-					<li><button id="resetBtn">Reset</button></li>
+					<li>
+						<button id="newBtn">New</button>
+					</li>
+					<li>
+						<button id="deleteBtn">Delete</button>
+					</li>
+					<li>
+						<button id="renameBtn">Rename</button>
+					</li>
+					<li>
+						<button id="saveAsBtn">saveAs</button>
+					</li>
+					<li>
+						<button id="resetBtn">Reset</button>
+					</li>
 				</ul>
 				
 				<ul id="list">
@@ -32,19 +43,46 @@
 		</section>
 		<script src="notepad.js"></script>
 		<script>
+			function listDblHandler(e) {
+				Control.checkChanges(e);
+				Control.selectTarget(e);
+				Control.openFile(e);
+			}
 			
-			Control.newBtn.addEventListener('click',Control.createNewFIle);
-			Control.deleteBtn.addEventListener('click',Control.deleteFile);
-			Control.list.addEventListener('dblclick',Control.checkChanges);
-			Control.list.addEventListener('dblclick',Control.selectTarget);
-			Control.tab.addEventListener('click',Control.checkChanges);
-			Control.tab.addEventListener('click',Control.selectTarget);
-			Control.list.addEventListener('dblclick',Control.openFile);
-			Control.tab.addEventListener('click',Control.openFile);
-			Control.saveBtn.addEventListener('click',Control.saveText);
-			Control.tab.addEventListener('click',Control.closeTab);
-			Control.renameBtn.addEventListener('click',Control.renameFile);
-			Control.resetBtn.addEventListener('click',Control.resetAll);
+			function tabClickHandler(e) {
+				Control.checkChanges(e);
+				Control.selectTarget(e);
+				Control.openFile(e);
+				Control.closeTab(e);
+			}
+			
+			function menuClickHandler(e) {
+				switch (e.target.id) {
+					case 'newBtn' :
+						Control.createNewFIle(e);
+						break;
+					case 'deleteBtn' :
+						Control.deleteFile(e);
+						break;
+					case 'renameBtn':
+						Control.renameFile(e);
+						break;
+					case 'resetBtn' :
+						Control.resetAll(e);
+						break;
+					case 'saveAsBtn' :
+						Control.saveAs(e);
+						break;
+				}
+			}
+			
+			Control.listMenu.addEventListener('click', menuClickHandler)
+			
+			Control.list.addEventListener('dblclick', listDblHandler);
+			Control.tab.addEventListener('click', tabClickHandler);
+			
+			Control.saveBtn.addEventListener('click', Control.saveText);
+			
 			
 			Control.initNote();
 		

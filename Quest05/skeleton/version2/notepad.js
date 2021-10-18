@@ -33,6 +33,8 @@ class Control {
     static renameBtn = document.getElementById('renameBtn');
     static resetBtn = document.getElementById('resetBtn');
     static saveBtn = document.getElementById('saveBtn');
+    static saveAsBtn = document.getElementById('saveAsBtn');
+    static listMenu = document.getElementById('listMenu');
     static curTarget;
     static curTargetNode;
     static priorTarget;
@@ -49,7 +51,7 @@ class Control {
     static createNewFIle() {
         let name = prompt('파일명을 입력해주세요');
 
-        for (let i = 0;i<localStorage.length; i++) {
+        for (let i = 0; i < localStorage.length; i++) {
             if (localStorage.key(i) === name) {
                 alert('동일한 파일명이 존재합니다.')
                 return;
@@ -77,11 +79,11 @@ class Control {
                 li.remove();
             }
         });
-        Control.priorTarget=null;
-        Control.curTarget=null;
-        Control.priorTargetNode=null;
-        Control.curTargetNode=null;
-        Control.form.style.display='none';
+        Control.priorTarget = null;
+        Control.curTarget = null;
+        Control.priorTargetNode = null;
+        Control.curTargetNode = null;
+        Control.form.style.display = 'none';
     }
 
 
@@ -91,36 +93,60 @@ class Control {
                 list.removeChild(
                     list.firstChild
                 );
-                while (Control.tab.hasChildNodes()) {
-                    tab.removeChild(
-                        tab.firstChild
-                    );
-                    Control.form.style.display = 'none';
-                    localStorage.clear();
-                }
             }
+            while (Control.tab.hasChildNodes()) {
+                tab.removeChild(
+                    tab.firstChild
+                );
+            }
+            Control.form.style.display = 'none';
+            localStorage.clear();
         }
     }
 
+
     static selectTarget(e) {
-        if(Control.priorTargetNode){
-            Control.priorTargetNode.style.backgroundColor='#FAEEE0';
+        if (Control.priorTargetNode) {
+            Control.priorTargetNode.style.backgroundColor = '#FAEEE0';
+            if(Control.priorTargetNode.className==="noteTab"){
+                [...list.children].forEach(list=>{
+                    if(list.textContent===Control.priorTarget){
+                        list.style.backgroundColor = '#FAEEE0';
+                    }
+                });
+            }else if(Control.priorTargetNode.className==="noteList"){
+                [...tab.children].forEach(tab=>{
+                    if(tab.textContent.slice(0,-1)===Control.priorTarget){
+                        tab.style.backgroundColor = '#FAEEE0';
+                    }
+                });
+            }
         }
 
         if (e.target.className === 'noteTab') {
             Control.curTarget = e.target.textContent.slice(0, -1);
-            Control.curTargetNode=e.target;
+            Control.curTargetNode = e.target;
             let file = JSON.parse(localStorage.getItem(Control.curTarget));
             Control.textbox.value = file.text;
 
-            e.target.style.backgroundColor ='#f9cf93';
+            e.target.style.backgroundColor = '#f9cf93';
+            [...list.children].forEach(list=>{
+                if(list.textContent===Control.curTarget){
+                    list.style.backgroundColor = '#f9cf93';
+                }
+            });
 
         } else if (e.target.className === 'noteList') {
             Control.textbox.value = JSON.parse(localStorage.getItem(e.target.textContent)).text;
             Control.curTarget = e.target.textContent;
-            Control.curTargetNode=e.target;
+            Control.curTargetNode = e.target;
 
-            e.target.style.backgroundColor ='#f9cf93';
+            e.target.style.backgroundColor = '#f9cf93';
+            [...tab.children].forEach(tab=>{
+                if(tab.textContent.slice(0,-1)===Control.curTarget){
+                    tab.style.backgroundColor = '#f9cf93';
+                }
+            });
 
         }
 
@@ -143,8 +169,9 @@ class Control {
             let file = JSON.parse(localStorage.getItem(Control.curTarget));
             Control.textbox.value = file.text;
             Control.form.style.display = 'flex';
-
-            Control.openTab();
+            if (e.currentTarget !== Control.tab) {
+                Control.openTab();
+            }
         }
     }
 
@@ -168,8 +195,8 @@ class Control {
     static renameFile() {
         if (Control.curTarget) {
             const newName = prompt('이름을 입력해주세요');
-            for(let i=0;i<localStorage.length;i++){
-                if(localStorage.key(i)===newName){
+            for (let i = 0; i < localStorage.length; i++) {
+                if (localStorage.key(i) === newName) {
                     alert('동일한 이름을 가진 파일이 존재합니다.')
                     return;
                 }
@@ -180,37 +207,51 @@ class Control {
             localStorage.removeItem(Control.curTarget);
 
 
-            [...Control.list.children].forEach(li=>{
-                if(li.textContent===Control.curTarget){
-                    li.textContent=newName;
+            [...Control.list.children].forEach(li => {
+                if (li.textContent === Control.curTarget) {
+                    li.textContent = newName;
                 }
             });
-            [...Control.tab.children].forEach(li=>{
-                if(li.textContent.slice(0,-1)===Control.curTarget){
-                    li.firstChild.textContent=newName;
+            [...Control.tab.children].forEach(li => {
+                if (li.textContent.slice(0, -1) === Control.curTarget) {
+                    li.firstChild.textContent = newName;
                 }
             });
-            Control.curTarget=newName;
-            Control.priorTarget=newName;
+            Control.curTarget = newName;
+            Control.priorTarget = newName;
 
         }
     }
 
-    static checkChanges(e){
-        if(Control.priorTarget&&e.target.tagName==='LI'){
-            let originText=JSON.parse(localStorage.getItem(Control.priorTarget));
+    static checkChanges(e) {
+        if (Control.priorTarget && e.target.tagName === 'LI') {
+            let originText = JSON.parse(localStorage.getItem(Control.priorTarget));
             console.log(originText);
-            if(originText.text!==Control.textbox.value){
-                if(confirm('변경사항이 있습니다. 저장하시겠습니까?')){
+            if (originText.text !== Control.textbox.value) {
+                if (confirm('변경사항이 있습니다. 저장하시겠습니까?')) {
                     Control.saveText();
                 }
             }
         }
     }
 
+    static saveAs(){
+        let name = prompt("파일명을 입력해주세요");
 
+        for (let i = 0; i < localStorage.length; i++) {
+            if (localStorage.key(i) === name) {
+                alert('동일한 파일명이 존재합니다.')
+                return;
+            }
+        }
 
+        let notepad = new Notepad(name);
+        localStorage.setItem(name, JSON.stringify(notepad));
 
+        let file = JSON.parse(localStorage.getItem(name));
+        file.text = Control.textbox.value;
+        localStorage.setItem(file.name, JSON.stringify(file));
+    }
 }
 
 

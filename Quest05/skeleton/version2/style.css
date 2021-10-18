@@ -9,7 +9,7 @@ ul{
 }
 button:not(#tab button){
     height: 28px;
-    width: 70px;
+    width: 55px;
     background-color: #F9E4C8;
     border-style: none;
     border-radius: 5px;
@@ -60,6 +60,7 @@ button:not(#tab button){
     border : 1px solid black;
     cursor: default;
     display: none;
+    padding: 2px;
 }
 
 #rightBox>#form{
