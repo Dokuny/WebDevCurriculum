@@ -101,6 +101,11 @@ class Control {
             }
             Control.form.style.display = 'none';
             localStorage.clear();
+            Control.priorTarget = null;
+            Control.curTarget = null;
+            Control.priorTargetNode = null;
+            Control.curTargetNode = null;
+
         }
     }
 
@@ -226,7 +231,6 @@ class Control {
     static checkChanges(e) {
         if (Control.priorTarget && e.target.tagName === 'LI') {
             let originText = JSON.parse(localStorage.getItem(Control.priorTarget));
-            console.log(originText);
             if (originText.text !== Control.textbox.value) {
                 if (confirm('변경사항이 있습니다. 저장하시겠습니까?')) {
                     Control.saveText();

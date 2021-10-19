@@ -59,33 +59,30 @@
 			function menuClickHandler(e) {
 				switch (e.target.id) {
 					case 'newBtn' :
-						Control.createNewFIle(e);
+						Control.createNewFIle();
 						break;
 					case 'deleteBtn' :
-						Control.deleteFile(e);
+						Control.deleteFile();
 						break;
 					case 'renameBtn':
-						Control.renameFile(e);
+						Control.renameFile();
 						break;
 					case 'resetBtn' :
-						Control.resetAll(e);
+						Control.resetAll();
 						break;
 					case 'saveAsBtn' :
-						Control.saveAs(e);
+						Control.saveAs();
 						break;
 				}
 			}
 			
-			Control.listMenu.addEventListener('click', menuClickHandler)
-			
+			Control.listMenu.addEventListener('click', menuClickHandler);
 			Control.list.addEventListener('dblclick', listDblHandler);
 			Control.tab.addEventListener('click', tabClickHandler);
 			
 			Control.saveBtn.addEventListener('click', Control.saveText);
 			
-			
 			Control.initNote();
-		
 		</script>
 	</body>
 </html>
